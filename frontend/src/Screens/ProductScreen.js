@@ -9,7 +9,7 @@ import Message from '../Components/Message';
 
 const ProductScreen = ({history, match}) => {
     
-    const [qty, setQty] = useState(0)
+    const [qty, setQty] = useState(1)
 
     const dispatch = useDispatch()
 
@@ -27,7 +27,7 @@ const ProductScreen = ({history, match}) => {
 
     return (
         <>
-            <Link to='/' className='btn btn-secondary my-3'><i class="fas fa-chevron-left"></i>  Go Back</Link>
+            <Link to='/' className='btn btn-secondary my-3'><i className="fas fa-chevron-left"></i>  Go Back</Link>
             { loading ? <Loader/> : error ? <Message variant='danger'>{error}</Message> :(
                 <Row>
                 <Col md={6}>
